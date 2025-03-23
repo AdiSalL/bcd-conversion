@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCD Conversion</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="navbar bg-base-100 shadow-sm">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl">@adisalafudin</a>
+      </div>
+      <div class="flex-none">
+        <div class="dropdown dropdown-end">
+          <div
+            tabindex="0"
+            role="button"
+            class="btn btn-ghost btn-circle avatar"
+          >
+            <div class="w-10 rounded-full">
+              <img
+                alt="Tailwind CSS Navbar component"
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+              />
+            </div>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li>
+              <a
+                class="justify-between"
+                href="https://adisalafudin-com.vercel.app/"
+              >
+                About
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="flex flex-col gap-2 items-center h-screen justify-center">
+      <div class="flex gap-2">
+        <!-- Dropdown for selecting conversion type -->
+        <select id="conversionType">
+          <option class="text-black" value="8421">8421 BCD</option>
+          <option class="text-black" value="4221">4221 BCD</option>
+          <option class="text-black" value="5421">5421 BCD</option>
+          <option class="text-black" value="8-4-2-1">8,4,-2,-1 BCD</option>
+        </select>
+        <!-- Input field -->
+        <input
+          type="number"
+          placeholder="Type a number"
+          class="input"
+          id="input"
+        />
+        <!-- Convert Button -->
+        <button class="btn" id="convert-btn" onclick="convertNum()">
+          Convert
+        </button>
+      </div>
+      <!-- Output Result -->
+      <div class="w-max text-center mt-4">
+        <p id="result" class="w-full text-lg font-semibold"></p>
+        <button
+          id="convert-gray-btn"
+          class="btn mt-2 hidden"
+          onclick="convertToGray()"
+        >
+          Convert To Gray
+        </button>
+      </div>
+    </main>
+    <footer
+      class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4"
+    >
+      <aside>
+        <p>Copyright ©2025 - All right reserved by adisalafudin</p>
+      </aside>
+    </footer>
+    <script src="src/main.js"></script>
+  </body>
+</html>
